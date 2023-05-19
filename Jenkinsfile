@@ -3,17 +3,17 @@ pipeline{
     stages{
         stage("update version"){
             steps{
-                sh 'update version'
+                sh "echo update version"
             }
         }
         stage("Build Project"){
             steps{
-             sh 'echo this is build project'   
+             sh "echo this is build project"  
             }
         }
         stage("Create Docker image"){
             steps{
-              sh "create docker image"
+              sh "echo create docker image"
             }
         }
         stage("put into jfrog artifactory"){
@@ -23,7 +23,7 @@ pipeline{
         }
         stage("deploy into virtual machine"){
             steps{
-                sh 'deploy into ec2 machine'
+                sh 'echo deploy into ec2 machine'
             }
         }
     }
